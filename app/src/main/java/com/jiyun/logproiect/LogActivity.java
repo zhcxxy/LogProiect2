@@ -148,12 +148,12 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
         String reemail = "\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
 
-//        if (TextUtils.isEmpty(name)) {
-//            Toast.makeText(this, "请输入手机号或邮箱", Toast.LENGTH_SHORT).show();
-//        }
-//        if (TextUtils.isEmpty(password)) {
-//            Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-//        } else {
+        if (TextUtils.isEmpty(name)) {
+            Toast.makeText(this, "请输入手机号或邮箱", Toast.LENGTH_SHORT).show();
+        }
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+        } else {
 
             Pattern p = Pattern.compile(reemail);
             Matcher m = p.matcher(name);
@@ -161,7 +161,6 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
             Matcher m1 = p1.matcher(name);
 
 
-//        if (Pattern.matches(rename, name) || Pattern.matches(reemail, name)) {
             if (m.find() || m1.find()) {
                 Toast.makeText(this, "账号正确", Toast.LENGTH_SHORT).show();
                 if (password.length() >= 6 && password.length() <= 16) {
@@ -175,7 +174,7 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
             }
 
 
-//        }
+        }
 
     }
 
